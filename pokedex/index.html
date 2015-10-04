@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-app="pokedex">
+    <div ng-controller="PokedexController as pokeCtrl">
+      <h1>COLTECdex</h1>
+
+      <table>
+        <tr><td><b>Pokemon</b></td></tr>
+        <tr ng-repeat="pokemon in pokeCtrl.pokemons">
+          <td>{{pokemon.name}}</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
