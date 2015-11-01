@@ -11,8 +11,9 @@
 
       <table>
         <tr><td><b>Pokemon</b></td></tr>
-        <tr ng-repeat="pokemon in pokeCtrl.pokemons">
-          <td>{{pokemon.name}}</td>
+        ID: <input min="0" type="number" ng-model="pokeCtrl.search" ng-change="pokeCtrl.getDetails()" /> <br />
+        <tr ng-repeat="pokemon in pokeCtrl.pokemons | filter:{id:pokeCtrl.search}:true ">
+          <td>{{ pokemon | json }}</td>
         </tr>
       </table>
     </div>
